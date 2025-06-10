@@ -1,0 +1,77 @@
+.logo-carousel-container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem 0;
+  background-color: #f9f9f9;
+}
+
+.carousel-row {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 100px;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  align-items: center;
+  gap: 2rem; /* Adds spacing between logos */
+  padding: 0 1rem;
+}
+
+.logo {
+  flex: 0 0 auto;
+  width: 120px;
+  height: 100px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: grayscale(100%) brightness(0.9);
+  opacity: 0.8;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%) brightness(1);
+  opacity: 1;
+}
+
+/* Animations */
+.scroll-right .carousel-track {
+  animation-name: scrollRight;
+}
+
+.scroll-left .carousel-track {
+  animation-name: scrollLeft;
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+}
