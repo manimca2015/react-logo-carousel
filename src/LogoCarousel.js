@@ -2,15 +2,15 @@ import React from 'react';
 import './LogoCarousel.css';
 
 const logos = [
-  '/logos/logo1.jpg',
-  '/logos/logo2.jpg',
-  '/logos/logo3.jpg',
-  '/logos/logo1.jpg',
-  '/logos/logo2.jpg',
-  '/logos/logo3.jpg',
-  '/logos/logo1.jpg',
-  '/logos/logo2.jpg',
-  '/logos/logo3.jpg',
+  process.env.PUBLIC_URL + '/logos/logo1.jpg',
+  process.env.PUBLIC_URL + '/logos/logo2.jpg',
+  process.env.PUBLIC_URL + '/logos/logo3.jpg',
+  process.env.PUBLIC_URL + '/logos/logo1.jpg',
+  process.env.PUBLIC_URL + '/logos/logo2.jpg',
+  process.env.PUBLIC_URL + '/logos/logo3.jpg',
+  process.env.PUBLIC_URL + '/logos/logo1.jpg',
+  process.env.PUBLIC_URL + '/logos/logo2.jpg',
+  process.env.PUBLIC_URL + '/logos/logo3.jpg',
 ];
 
 export default function LogoCarousel() {
